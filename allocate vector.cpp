@@ -25,6 +25,12 @@ class vec {
         return arr[idx];
     }
 
+    int& operator[](int idx){
+        return arr[idx];
+    }
+
+
+
     };
 
 int main(){
@@ -32,7 +38,7 @@ int main(){
     vec v = vec(10);
 
     for(int i =0; i < v.size(); i++){
-        v.at(i) = i;
+        v[i] = i;
     }
 
     for(int i=0; i < v.size(); i++){
