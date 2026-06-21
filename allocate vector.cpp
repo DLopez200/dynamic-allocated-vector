@@ -68,6 +68,16 @@ class vec {
         }
         cout <<"pushed back "<< x <<endl;
     }
+    int pop_back(){
+        if(arr_size == 0){
+            cout << "error noting to popback" <<endl;
+            return -1;
+        }
+        //cout <<arr_size <<endl;
+
+        arr_size --;
+        return arr[arr_size];
+    }
 
     int& at(int idx){
         return arr[idx];
@@ -91,6 +101,17 @@ int main(){
         v.push_back(i);
     }
 
+    //cout <<v.size()<<endl;
+
+/*    for(int i =0; i <v.size(); i++){ //this condition will never complete
+                                    // due to int i and v.size meeting at the 50 amrk
+        cout << v.pop_back() <<endl;
+    }
+        */
+
+    while(v.size() > 0){
+        cout <<v.pop_back() << endl;
+    }
 /*
     for(int i =0; i < v.size(); i++){
         v[i] = i;
