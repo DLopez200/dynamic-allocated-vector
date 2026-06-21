@@ -46,7 +46,13 @@ class vec {
             arr_size++;
         }
         else{
-            arr_cap *=2;//doubled the array capacity
+            if(arr_cap == 0){
+                arr_cap = 1;
+            }
+            else{
+                arr_cap *=2;//doubled the array capacity
+            }
+            
             int* new_arr = new int[arr_cap];
 
             for(int i = 0; i < arr_size; i++){
@@ -77,9 +83,9 @@ class vec {
 
 int main(){
 
-    vec v = vec(1);
+    vec v = vec();
 
-    v[0];
+  
 
     for(int i=0; i <100; i++){
         v.push_back(i);
